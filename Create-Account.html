@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: hsla(0, 0%, 63%, 0.658);
+        }
+
+        #Create-Account-Page{
+            padding: 20px;
+            width: 40%;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        #Info-form{
+            margin-bottom: 10px;
+            padding: 20px 15px;
+            position: relative;
+            border: 1px solid hsl(0, 0%, 72%);
+            border-radius: 5px;
+        }
+
+        #Info-form span{
+            color: red;
+        }
+
+        #Info-form p{
+            position: absolute;
+            top: -26px;
+            background-color: white;
+            padding: 0px 5px;
+        }
+
+        #Info-form .Infos{
+            margin-top: 10px;
+            margin-bottom: 25px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid hsl(0, 0%, 50%);
+        }
+
+        #Account-Info{
+            margin-bottom: 10px;
+            padding: 20px 15px;
+            position: relative;
+            border: 1px solid hsl(0, 0%, 72%);
+            border-radius: 5px;
+        } 
+
+        #Account-Info span{
+            color: red;
+        }
+
+        #Account-Info p{
+            position: absolute;
+            top: -26px;
+            background-color: white;
+            padding: 0px 5px;
+        }
+
+        #Account-Info .Infos{
+            margin-top: 10px;
+            margin-bottom: 25px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid hsl(0, 0%, 50%);
+        }
+
+        #Preference-Page{
+            padding: 20px 15px;
+            position: relative;
+            border: 1px solid hsl(0, 0%, 72%);
+            border-radius: 5px;
+        }
+
+        #Preference-Page span{
+            color: red;
+        }
+
+        #Preference-Page #title{
+            position: absolute;
+            top: -26px;
+            background-color: white;
+            padding: 0px 5px;
+        }
+
+        #Preference-Page .Infos{
+            margin-top: 10px;
+            margin-bottom: 25px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid hsl(0, 0%, 50%);
+        }
+
+        #Preferred-Contact{
+            border: 1px solid;
+            padding: 20px 15px;
+            position: relative;
+            border-radius: 5px;
+            border: 1px solid hsl(0, 0%, 72%);
+            margin-bottom: 10px;
+        }
+
+        #Preferred-Contact p{
+            position: absolute;
+            background-color: white;
+            top: -26px;
+            padding: 0px 5px;
+        }
+
+        #User-Interest{
+            margin-bottom: 10px;
+            border: 1px solid;
+            padding: 20px 15px;
+            position: relative;
+            border-radius: 5px;
+            border: 1px solid hsl(0, 0%, 72%);
+        }
+
+        #User-Interest p{
+            position: absolute;
+            background-color: white;
+            top: -26px;
+            padding: 0px 5px;
+        }
+
+        #ABOUT-USER{
+            margin-top: 5px;
+            width: 100%;
+            height: 110px;
+            font-size: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+
+        #SUBCRIBE{
+            margin-bottom: 25px;
+        }
+
+        #AGREEMENT{
+            margin-bottom: 25px;
+        }
+
+        #Create-Account{
+            margin-top: 5px;
+            background-color: hsl(120, 100%, 37%);
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <form id="Create-Account-Page">
+        <h1>Create Your Account</h1>
+
+        <div id="Info-form" action="">
+            <p>Personal Information</p>
+
+            <label for="First-Name">First Name <span>*</span></label><br>
+            <input type="text" class="Infos" id="First-Name" required>
+
+            <label for="Last-Name">Last Name <span>*</span></label><br>
+            <input type="text" class="Infos" id="Last-Name" required>
+
+            <label for="Email-input">Email <span>*</span></label><br>
+            <input type="email" class="Infos" id="Email-input" required>
+
+            <label for="Tel-input">Phone Number <span>*</span></label><br>
+            <input type="tel" class="Infos" id="Tel-input" required maxlength="11" minlength="11" placeholder="123-456-7890">
+
+            <label for="BirthDate-input">Date of Birth <span>*</span></label><br>
+            <input type="date" class="Infos" id="BirthDate-input" required>            
+        </div>
+
+        <div id="Account-Info" action="">
+            <p>Account Information</p>
+
+            <label for="UserName">Username <span>*</span></label><br>
+            <input type="text" class="Infos" id="UserName" required>
+
+            <label for="PassWord">Password <span>*</span></label><br>
+            <input type="password" class="Infos" id="PassWord" required>
+
+            <label for="Password-Confirmation">Confirm Password <span>*</span></label><br>
+            <input type="password" class="Infos" id="PassWord" required>
+
+            <label for="Profile-Picture">Profile Picture</label>
+            <input type="file" id="Profile-Picture">
+        </div>
+
+        <div id="Preference-Page">
+            <p id="title">Preference</p>
+
+            <label for="Country">Country <span>*</span></label><br>
+            <select name="" class="Infos" id="Country" required>
+                <option value="">Select your country</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Japan">Japan</option>
+                <option value="United State of America (USA)">United State of America (USA)</option>
+                <option value="China">China</option>
+            </select>
+
+            <div id="Preferred-Contact">
+                <p>Preferred Contact Method</p>
+
+                <input type="radio" id="EMAIL" name="Contact">
+                <label for="EMAIL">Email</label>
+
+                <input type="radio" id="PHONE" name="Contact">
+                <label for="PHONE">Phone</label>
+
+                <input type="radio" id="TEXT-MESSAGE" name="Contact">
+                <label for="TEXT-MESSAGE">Text Message</label>
+
+    
+            </div>
+
+            <div id="User-Interest">
+                <p>Interest (select all that apply)</p>
+
+                <input type="checkbox" id="WEB-DEVELOPMENT" name="About">
+                <label for="WEB-DEVELOPMENT">Web Development</label>
+
+                <input type="checkbox" id="DESIGN" name="About">
+                <label for="DESIGN">Design</label>
+
+                <input type="checkbox" id="MOBILE-DEVELOPMENT" name="About">
+                <label for="MOBILE-DEVELOPMENT">Mobile Development</label>
+
+                <input type="checkbox" id="DATA-SCIENCE" name="About">
+                <label for="DATA-SCIENCE">Date Science</label>
+    
+            </div>
+
+            <label for="About-User">Tell us about yourself</label><br>
+            <textarea name="" id="ABOUT-USER" placeholder="Share your interest, goals, or background"></textarea>
+
+            <input type="checkbox" id="SUBCRIBE">
+            <label for="SUBCRIBE">Subscibe to our newsletter</label><br>
+
+            <input type="checkbox" id="AGREEMENT">
+            <label for="AGREEMENT">I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></label>
+
+        </div>
+
+        <button id="Create-Account">Create Account</button>
+
+    </form>
+
+</body>
+</html>
