@@ -1,0 +1,68 @@
+body{
+    margin: 0px;
+}
+.Container{
+    display: grid;
+
+    grid-template-areas: 
+    "Header Header Header"
+    "Navigation Navigation Navigation"
+    "SideBar Main Main"
+    "Footer Footer Footer"
+    ;
+
+    grid-template-columns: 200px 1fr 100px;
+    grid-template-rows: 100px 50px 1fr 100px;
+    gap: 5px
+}
+
+.Container div{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    text-align: center;
+}
+
+.Container .SideBar, .Main{
+    padding: 5%;
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+    .Container{
+        grid-template-areas: 
+        "Head Head"
+        "Navigation Navigation"
+        "SideBar Main"
+        "Footer Footer Footer"
+        ;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 50px 1fr 1fr 5px;
+        gap: 5px
+    }
+
+    .Container .SideBar, .Main{
+        font-size: 1em;
+        padding: 5%;
+    }
+}
+
+@media (max-width: 767px) {
+    .Container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Container div{
+        padding: 3%;
+    }
+
+    .Nav{
+        display: none;
+    }
+}
+
+.Head{grid-area: Header}
+.Nav{grid-area: Navigation}
+.SideBar{grid-area: SideBar}
+.Main{grid-area: Main}
+.Footer{grid-area: Footer}
